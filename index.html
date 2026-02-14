@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine Neillah Mary ❤️</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        color: white;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .container {
+        margin-top: 10%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.4em;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    button {
+        background: white;
+        color: #ff4d6d;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        background: #ffe6ec;
+    }
+
+    .heart {
+        position: absolute;
+        font-size: 20px;
+        animation: float 6s linear infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(100vh); opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .signature {
+        margin-top: 40px;
+        font-style: italic;
+        font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Happy Valentine’s Day Neillah Mary ❤️</h1>
+    <p>
+        It’s been our time since schooling, and I want to make this last forever.  
+        Will you be my Valentine?
+    </p>
+
+    <button onclick="surprise()">Click for a surprise 💝</button>
+
+    <div class="signature">
+        — From JAY BRAN
+    </div>
+</div>
+
+<script>
+function surprise() {
+    alert("Neillah Mary 💖\nYou are the best thing that ever happened to me.\nI choose you today, tomorrow, and always.\n\nLove, JAY BRAN ❤️");
+}
+
+// hearts animation
+setInterval(() => {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 20) + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}, 300);
+</script>
+
+</body>
+</html>
